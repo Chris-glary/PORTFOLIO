@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8f400d1ffb.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+
+                
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                    
+            
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi !!! <br>I'm<span> Chris Glary.C</span> <br>from kaniyakumari</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------about------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="myphoto.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p> 
+                 I am a highly motivated B.Tech student passionate about Cloud, DevOps, and Web Development.
+                 Proficient in Java and AWS Certified Cloud Practitioner. 
+                 Skilled in building scalable solutions and automation. Eager to apply and enhance my technical expertise. </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick ="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('certification')">Certifications</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java Programming</span><br>Intermediate level</li>
+                        <li><span>cloud and devops  Programming</span><br>Intermediate level</li>
+                        <li><span>Web Development</span><br>HTML,CSS,Javascript</li>
+
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-Current</span><br>B.Tech Information Technology at St.Joseph's College Of Engineering</li>
+
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certification">
+                    <ul>
+                        <li><span>AWS</span><br>AWS certified cloud Practioner</li>
+                        <li><span>NPTEL</span><br>Data Base Management System</li>
+                        <li><span>NPTEL</span><br>Programming in Java</li>
+                    </ul>
+                </div>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    <!----------------portfolio----------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="mini project.jpeg">
+                    <div class="layer">
+                        <h3>Mini Project</h3>
+                        <p>The Project is about library management system which is made using mysql database.
+                        </p>
+                        <a href="library.pdf"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="certification.jpeg">
+                    <div class="layer">
+                        <h3>Cerfications</h3>
+                        <p>The certifications I have completed so far is included.
+                        </p>
+                        <a href="chrisglary.c-aws-clfc02.pdf"><i class="fa-solid fa-link"></i></a>
+                        <a href="Data Base Management System.pdf"><i class="fa-solid fa-link"></i></a>
+                        <a href="Programming In Java.pdf"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-------------contact------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>glarychris@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/chris-glary-c-b3333725a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/glary_christo?utm_source=qr&igsh=a3c4aDg1dWUyNGs2"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="chris glary resume final 2.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright Glary.Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+        </div>
+    </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        
+    }
+</script>
+    </body>
+
+</html>
